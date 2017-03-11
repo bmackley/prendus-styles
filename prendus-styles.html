@@ -58,13 +58,34 @@
 					margin: 0;
 				}
 
-				/* TODO: replace :webkit-any and :-moz-any with the standardized selector once implemented */
+				/* TODO: replace this obnoxious thing with :matches or equivalent once implemented */
+				/* See http://caniuse.com/#search=%3Amatches */
 
-				:-webkit-any(p, h1, h2, h3, h4, h5, h6) + :-webkit-any(p, h1, h2, h3, h4, h5, h6) {
-					margin-top: .7em;
-				}
-
-				:-moz-any(p, h1, h2, h3, h4, h5, h6) + :-moz-any(p, h1, h2, h3, h4, h5, h6) {
+				p + p,
+				p + h1,
+				p + h2,
+				p + h3,
+				p + h4,
+				h1 + p,
+				h1 + h1,
+				h1 + h2,
+				h1 + h3,
+				h1 + h4,
+				h2 + p,
+				h2 + h1,
+				h2 + h2,
+				h2 + h3,
+				h2 + h4,
+				h3 + p,
+				h3 + h1,
+				h3 + h2,
+				h3 + h3,
+				h3 + h4,
+				h4 + p,
+				h4 + h1,
+				h4 + h2,
+				h4 + h3,
+				h4 + h4 {
 					margin-top: .7em;
 				}
 
