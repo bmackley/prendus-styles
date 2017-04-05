@@ -12,12 +12,13 @@
 				:root {
 					--prendus-primary-color: var(--paper-indigo-500);
 					--prendus-primary-color-emphasis: var(--paper-indigo-700);
+					--prendus-primary-color-light: var(--paper-indigo-50);
 					--prendus-off-white: #fafafa;
 					--prendus-grey: #f0f0f0;
 					--prendus-red: var(--paper-red-500);
 				}
 
-				/* GENERAL */
+				/* TEXT */
 
 				* {
 					font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -34,17 +35,17 @@
 
 				h1 {
 				  font-weight: 300;
-				  font-size: calc(2.2em + 2vw);
+				  font-size: calc(1.8em + 2vw);
 				}
 
 				h2 {
 				  font-weight: 300;
-				  font-size: calc(1.4em + 1vw);
+				  font-size: calc(1.3em + 1vw);
 				}
 
 				h3 {
 				  font-weight: 200;
-				  font-size: calc(1em + 1vw);
+				  font-size: calc(.9em + 1vw);
 				  color: #777;
 				}
 
@@ -89,6 +90,23 @@
 					margin-top: .7em;
 				}
 
+				/* CONTAINERS */
+
+				.prendus-vertical-container > * + * {
+					margin-top: 15px;
+				}
+
+				.prendus-horizontal-container > * + * {
+					margin-left: 5px;
+				}
+
+				.prendus-card {
+					border-radius: 2px;
+
+					/* material design shadows */
+					@apply(--shadow-elevation-2dp);
+				}
+
 				/* BUTTONS */
 
 				.prendus-button {
@@ -106,18 +124,14 @@
 					cursor: pointer;
 				}
 
-				.prendus-button iron-icon {
-					height: 1.3em;
-					width: 1.3em;
-				}
-
-				.prendus-button iron-icon + * {
-					margin-left: 5px;
-				}
-
 				.prendus-button:hover {
 					text-decoration: none;
 					background-color: var(--paper-grey-300);
+				}
+
+				.prendus-button:focus {
+					font-weight: bold;
+					outline: none;
 				}
 
 				.prendus-button[disabled] {
@@ -128,6 +142,15 @@
 
 				.prendus-button[disabled]:hover {
 					background-color: var(--paper-grey-200);
+				}
+
+				.prendus-button iron-icon {
+					height: 1.3em;
+					width: 1.3em;
+				}
+
+				.prendus-button > * + * {
+					margin-left: 5px;
 				}
 
 				.prendus-button--recommended {
@@ -164,11 +187,25 @@
 					padding: .9em 1.8em;
 				}
 
+				/* Formats buttons in any div with the class "buttons" */
 				.buttons .prendus-button + .prendus-button {
 					margin-left: 5px;
 				}
 
+				/* For buttons that look like inline text links */
+				.prendus-link-button {
+					color: var(--prendus-primary-color);
+					cursor: pointer;
+					border: none;
+					display: inline;
+				}
+
+				.prendus-link-button:hover {
+					text-decoration: underline;
+				}
+
 				.prendus-icon-button {
+					cursor: pointer;
 					color: rgba(0, 0, 0, .5);
 				}
 
