@@ -40,15 +40,35 @@
 				outline: none;
 			}
 
+			#menu-icon {
+				display: none;
+			}
+
+			@media (max-width: 768px) {
+
+				:host([responsive]) #button-text,
+				:host([responsive]) #arrow-icon {
+					display: none;
+				}
+
+				:host([responsive]) #menu-icon {
+					display: block;
+				}
+
+			}
+
+
 	  </style>
 
 		<!-- MENU BUTTON -->
 		<!-- NOTE: use on-up here in order to maintain menu functionality -->
 		<button id="drop-down-button" class$="[[classes]]" title$="[[buttonTitle]]" on-keydown="toggleMenuWithKeyboard" on-up="toggleMenu">
 			<template is="dom-if" if="[[buttonIcon]]">
-			  <iron-icon icon="[[buttonIcon]]"></iron-icon>
+			  <iron-icon id="button-icon" icon="[[buttonIcon]]"></iron-icon>
 			</template>
-			<span>[[buttonText]]</span><iron-icon icon="arrow-drop-down"></iron-icon>
+			<span id="button-text">[[buttonText]]</span>
+			<iron-icon id="arrow-icon" icon="arrow-drop-down"></iron-icon>
+			<iron-icon id="menu-icon" icon="menu"></iron-icon>
 		</button>
 		<!-- MENU ITEMS -->
 		<div id="drop-down-container" on-tap="toggleMenu">
