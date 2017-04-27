@@ -23,6 +23,7 @@
 				* {
 					font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 					word-wrap: break-word;
+					min-width: 0;
 				}
 
 				code {
@@ -108,9 +109,15 @@
 
 				.prendus-card {
 					border-radius: 2px;
+					padding: 15px;
+					background-color: white;
 
 					/* material design shadows */
 					@apply(--shadow-elevation-2dp);
+				}
+
+				.prendus-card--no-padding {
+					padding: 0;
 				}
 
 				/* BUTTONS */
@@ -214,12 +221,14 @@
 				}
 
 				.prendus-icon-button {
+					flex-shrink: 0;
 					cursor: pointer;
-					color: rgba(0, 0, 0, .5);
+					opacity: .6;
+					color: initial;
 				}
 
 				.prendus-icon-button:hover {
-					color: rgba(0, 0, 0, .8);
+					opacity: 1;
 				}
 
     </style>
