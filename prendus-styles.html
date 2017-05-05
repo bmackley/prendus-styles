@@ -15,6 +15,9 @@
 					--prendus-primary-color-light: var(--paper-indigo-50);
 					--prendus-off-white: #fafafa;
 					--prendus-grey: #f0f0f0;
+					--prendus-green: var(--paper-green-500);
+					--prendus-blue: var(--paper-blue-500);
+					--prendus-yellow: var(--paper-yellow-500);
 					--prendus-red: var(--paper-red-500);
 				}
 
@@ -97,6 +100,28 @@
 					margin-top: .7em;
 				}
 
+				/* NOTIFICATIONS */
+
+				.prendus-notification {
+					width: 100%;
+				}
+
+				.prendus-notification--success {
+					background: var(--prendus-green);
+				}
+
+				.prendus-notification--info {
+					background: var(--prendus-blue);
+				}
+
+				.prendus-notification--warning {
+					background: var(--prendus-yellow);
+				}
+
+				.prendus-notification--error {
+					background: var(--prendus-red);
+				}
+
 				/* CONTAINERS */
 
 				.prendus-vertical-container > * + * {
@@ -160,6 +185,7 @@
 				.prendus-button iron-icon {
 					height: 1.3em;
 					width: 1.3em;
+					flex-shrink: 0;
 				}
 
 				.prendus-button > * + * {
