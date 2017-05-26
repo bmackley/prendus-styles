@@ -1,11 +1,8 @@
 export class PrendusDropDown extends Polymer.Element{
-
-  public is: string;
 	public buttonType: string;
 	public buttonText: string;
 	public buttonTitle: string;
 	public classes: string;
-	public properties: any;
 	public querySelector: any;
 
   static get is() { return 'prendus-drop-down'; }
