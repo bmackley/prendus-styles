@@ -9,7 +9,7 @@
 
 				/* COLORS */
 
-				:root {
+				:host > * {
 					--prendus-primary-color: var(--paper-indigo-500);
 					--prendus-primary-color-emphasis: var(--paper-indigo-700);
 					--prendus-primary-color-light: var(--paper-indigo-50);
@@ -138,7 +138,7 @@
 					background-color: white;
 
 					/* material design shadows */
-					@apply(--shadow-elevation-2dp);
+					@apply --shadow-elevation-2dp;
 				}
 
 				.prendus-card--no-padding {
